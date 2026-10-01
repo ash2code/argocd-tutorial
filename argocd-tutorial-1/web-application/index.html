@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Argo CD Demo App</title>
+	<style>
+		:root {
+			color-scheme: light;
+			font-family: system-ui, sans-serif;
+			background: #f3f6f4;
+			color: #19352c;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			min-height: 100vh;
+			margin: 0;
+			display: grid;
+			place-items: center;
+			padding: 24px;
+		}
+
+		main {
+			width: min(100%, 560px);
+			padding: 40px;
+			border: 1px solid #d5e1da;
+			border-radius: 8px;
+			background: #fff;
+			box-shadow: 0 16px 40px rgb(25 53 44 / 8%);
+		}
+
+		.status {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			color: #24744e;
+			font-size: 0.875rem;
+			font-weight: 700;
+		}
+
+		.status::before {
+			width: 9px;
+			height: 9px;
+			border-radius: 50%;
+			background: #35a66c;
+			content: "";
+		}
+
+		h1 {
+			margin: 20px 0 12px;
+			font-size: clamp(2rem, 8vw, 3rem);
+			line-height: 1.1;
+		}
+
+		p {
+			margin: 0;
+			color: #52685f;
+			line-height: 1.6;
+		}
+
+		.version {
+			margin-top: 28px;
+			padding-top: 18px;
+			border-top: 1px solid #e3ebe6;
+			font-size: 0.875rem;
+		}
+
+		.version strong {
+			color: #19352c;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<span class="status">Application is running</span>
+		<h1>Hello from Nginx</h1>
+		<p>This simple web application is deployed and managed with Argo CD.</p>
+		<p class="version">Demo version: <strong>1.0</strong></p>
+	</main>
+</body>
+</html>
